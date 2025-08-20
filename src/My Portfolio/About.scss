@@ -1,0 +1,280 @@
+.about-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-inner {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-heading h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.typing-text {
+  background: linear-gradient(to right, #c084fc, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: #ccc;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+.about-description {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.icon-box {
+  padding: 1rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  svg {
+    color: white;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.instagram {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+}
+
+.whatsapp {
+  background: linear-gradient(to right, #22c55e, #10b981);
+}
+
+.email {
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+}
+
+.info-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card h3 {
+  text-align: center;
+  color: #c084fc;
+  margin-bottom: 1.5rem;
+}
+
+.personal-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.personal-info li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.skill-bar {
+  margin-bottom: 1.2rem;
+}
+
+.skill-bar .label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #d8b4fe;
+}
+
+.bar-bg {
+  background: #334155;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  height: 100%;
+  transition: width 0.8s ease-out;
+}
+
+.about-footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  padding-top: 1rem;
+}
+
+/* Tablet styles */
+@media (max-width: 900px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+  
+  .about-heading h1 {
+    font-size: 2.4rem;
+  }
+  
+  .info-skills {
+    gap: 1.5rem;
+  }
+  
+  .personal-info ul li {
+    flex-wrap: wrap;
+  }
+  
+  .personal-info ul li span:last-child {
+    text-align: left;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .about-heading h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .social-icons {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon-box {
+    padding: 0.8rem;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  .info-skills {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card {
+    padding: 1.2rem;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .personal-info ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .personal-info ul li span:first-child {
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #c084fc;
+  }
+  
+  .personal-info ul li span:last-child {
+    width: 100%;
+    word-break: break-all;
+  }
+  
+  .skill-bar {
+    margin-bottom: 1rem;
+  }
+  
+  .skill-bar .label {
+    font-size: 0.9rem;
+  }
+  
+  .about-footer {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 380px) {
+  .about-container {
+    padding: 0.8rem;
+  }
+  
+  .about-heading h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-description {
+    font-size: 0.95rem;
+  }
+  
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .icon-box {
+    padding: 0.7rem;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .personal-info ul li {
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .skill-bar .label {
+    font-size: 0.85rem;
+  }
+}

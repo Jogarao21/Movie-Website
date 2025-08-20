@@ -1,0 +1,129 @@
+/* Skills.scss */
+
+.skills-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom right, #1f2937, #111827);
+  position: relative;
+  overflow: hidden;
+  .section-header {
+     
+     margin-bottom: 60px;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, #34d399, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #d1d5db;
+  text-align: center;
+  font-size: 1.125rem;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 32px;
+}
+
+.skill-item {
+  background: linear-gradient(to bottom right, #1f2937, #111827);
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #374151;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.skill-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  border-color: #34d399;
+  box-shadow: 0 0 24px rgba(52, 211, 153, 0.2);
+}
+
+.skill-icon {
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.1) rotate(6deg);
+}
+
+.skill-name {
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-name {
+  color: #34d399;
+}
+
+.skills-footer {
+  text-align: center;
+  margin-top: 64px;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 60px 16px;
+  }
+
+  .skill-item {
+    padding: 16px;
+  }
+
+  .skills-footer {
+    font-size: 0.875rem;
+  }
+}

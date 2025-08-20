@@ -1,0 +1,80 @@
+.form-container {
+  height: 100vh;
+  background: linear-gradient(to right, #00d42a, #43e8f7, #6fb1fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.toggle-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toggle-btns button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.toggle-btns .active {
+  background: linear-gradient(to right, #00d4d4, #43f743);
+  color: white;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  color: #0052d4;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #00d451, #43ebf7);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bottom-text {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.bottom-text span {
+  color: #0052d4;
+  cursor: pointer;
+  font-weight: bold;
+}
